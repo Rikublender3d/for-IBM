@@ -29,3 +29,11 @@ show();
 console.log(functionVar); // ReferenceErrorをスローします
 console.log(functionLet); // ReferenceErrorをスローします
 console.log(functionConst); // ReferenceErrorをスローします
+{
+    let homeworkLet = "homeworkLet";
+    const homeworkConst ="homeworkConst";
+    var homeworkVar = "homeworkVar";
+    homeworkVar ="helloworldVar";
+    homeworkConst = "helloworldConst";
+    homeworkLet= "helloworldLet"
+}
