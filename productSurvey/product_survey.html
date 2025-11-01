@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>高級ブランドフィードバック</title>
+</head>
+<body>
+  <h1>高級ブランド製品フィードバックへようこそ</h1>
+  <h2>フィードバックを提供してください</h2>
+  <label for="name">名前:</label><br>
+  <input type="text" id="name" placeholder="あなたの名前" required><br>
+  <label for="age">年齢:</label><br>
+  <input type="number" id="age" placeholder="あなたの年齢" required><br>
+  <label for="email">メール:</label><br>
+  <input type="email" id="email" placeholder="あなたのメール" required><br>
+  <label for="job">職業:</label><br>
+  <input type="text" id="job" placeholder="あなたの職業" required><br>
+  <label for="designation">役職:</label><br>
+  <input type="text" id="designation" placeholder="あなたの役職" required><br>
+  <label for="productType">製品タイプ:</label><br>
+  <select id="productType" required>
+    <option value="perfume">香水</option>
+    <option value="cream">クリーム</option>
+    <option value="oils">オイル</option>
+  </select><br>
+  <label for="feedbackText">フィードバック:</label><br>
+  <textarea id="feedbackText" rows="5" cols="30" placeholder="ここにフィードバックを入力してください" required></textarea><br>
+<button id="submitBtn">フィードバックを送信</button>
+<hr>
+<div id="userInfo" style="display: none;">
+  <h2>ユーザー情報:</h2>
+  <p>名前: <span id="userName"></span></p>
+  <p>年齢: <span id="userAge"></span></p>
+  <p>メール: <span id="userEmail"></span></p>
+  <p>職業: <span id="userJob"></span></p>
+  <p>役職: <span id="userDesignation"></span></p>
+  <p>製品タイプ <span id="userProductChoice"></span> に対するフィードバック: <span id="userFeedback"></span></p>
+</div>
+<script src="./product_survey.js"></script>
+</body>
+</html>
