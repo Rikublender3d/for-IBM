@@ -20,7 +20,7 @@ function endTest() {
     var typedWords = userTypedText.split(/\s+/).filter(function (word) {
         return word !== "";
     }).length;
-
+    var totalLength = userTypedText.length;
     var wpm = 0;
 
     if ( timeElapsed !== 0 && !isNaN(typedWords)) {
@@ -28,6 +28,7 @@ function endTest() {
     }
     var outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "<h2>タイピングテストの結果:</h2>" +
+    "<p>合計の長さ: " + totalLength + "</p>" +
     "<p>入力した単語数: " + typedWords + "</p>" +
     "<p>経過時間: " + timeElapsed.toFixed(2) + " 秒</p>" +
     "<p>分あたりの単語数 (WPM): " + wpm + "</p>";
