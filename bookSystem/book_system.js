@@ -26,7 +26,8 @@ function showbooks() {
         <p><strong>著者名:</strong> ${book.authorName}</p>
         <p><strong>書籍の説明:</strong> ${book.bookDescription}</p>
         <p><strong>ページ数:</strong> ${book.pagesNumber} ページ</p>
-        <button onclick="editbook(${index})">編集</button>`
+        <button onclick="editbook(${index})">編集</button>
+        <button onclick="deletebook(${index})">削除</button>`
     );
     document.getElementById('books').innerHTML = booksDiv.join('');
 }
@@ -44,4 +45,14 @@ function clearInputs() {
     document.getElementById('authorName').value = '';
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
+}
+function deletebook(index) {
+    // 確認ダイアログ（オプション）
+    if (confirm('本当にこの書籍を削除しますか？')) {
+        // 配列から index 番目の要素を削除
+        books.splice(index, 1);
+
+        // 更新された配列を再表示
+        showbooks();
+    }
 }
